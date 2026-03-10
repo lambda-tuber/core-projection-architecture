@@ -1,0 +1,58 @@
+<mxfile host="65bd71144e">
+    <diagram id="SR-008-Final-Pure-Arch" name="SR-008 Layered Architecture">
+        <mxGraphModel dx="2428" dy="1958" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="header" value="CPA: Fractal Architecture" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="211" y="191" width="370" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="right_layer1" value="Boot Layer" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFE6E6;strokeColor=#CC0000;strokeWidth=2;fontSize=16;fontStyle=1;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="161" y="270" width="470" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="right_layer2" value="Interface Layer" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=2;fontSize=16;fontStyle=1;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="161" y="390" width="470" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="right_layer3" value="Application Base Layer" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;strokeWidth=2;fontSize=16;fontStyle=1;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="161" y="510" width="470" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="right_layer4" value="Projected Context Layer" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=2;fontSize=16;fontStyle=1;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="161" y="630" width="470" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="right_layer5" value="Core Model Layer" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;strokeWidth=2;fontSize=16;fontStyle=1;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="161" y="750" width="470" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="" style="shape=flexArrow;endArrow=classic;html=1;width=30;endSize=18.39166666666667;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="671" y="280" as="sourcePoint"/>
+                        <mxPoint x="671" y="840" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5" value="Dependency" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=90;" parent="1" vertex="1">
+                    <mxGeometry x="643" y="555" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="cpa-multiverse" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="306" y="785" width="180" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="cpa-semantic-world" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="211" y="665" width="180" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="cpa-ontological-world" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="421" y="665" width="180" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="cpa-bootstrap" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="306" y="305" width="180" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="cpa-fractal-app" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="306" y="545" width="180" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="cpa-request" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="211" y="426" width="180" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="cpa-response" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="421" y="426" width="180" height="50" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
