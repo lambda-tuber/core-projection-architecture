@@ -42,20 +42,20 @@ cpa-ontological/
 ```
 ┌──────────────────────────────────────────────────────┐
 │  Boot（起動層）                                       │  ← 形式化スコープ外
-│  AnotherWorld インスタンスで m を型として選択         │
-│  テストでは AnotherWorld 定義（ControlSpec）が代替    │
+│  AnotherWorld インスタンスで m を型として選択           │
+│  テストでは AnotherWorld 定義（ControlSpec）が代替     │
 ├──────────────────────────────────────────────────────┤
 │  Interface（現象層）                                  │  ← ControlSpec.hs が模擬
 ├──────────────────────────────────────────────────────┤
 │  Application Base（制御層）                           │  ← ApplicationBase/Control.hs
-│  World m 制約のみ。AnotherWorld を知らない            │
+│  World m 制約のみ。AnotherWorld を知らない             │
 ├──────────────────────────────────────────────────────┤
 │  Projected Context（射影層）                          │  ← ProjectedContext/Context.hs
 │  World m 制約で loadAvatar / saveAvatar を呼ぶ        │
 ├──────────────────────────────────────────────────────┤
 │  Core Model（根源層）                                 │  ← CoreModel/Type.hs
-│  GlobalConfig / ContextualState                       │
-│  Avatar m（世界パラメータ付き）                       │
+│  GlobalConfig / ContextualState                      │
+│  Avatar m（世界パラメータ付き）                        │
 │  World m 型クラス（loadAvatar / saveAvatar）          │
 └──────────────────────────────────────────────────────┘
 ```

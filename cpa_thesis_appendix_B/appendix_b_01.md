@@ -44,8 +44,8 @@ cpa-semantic/
 ```
 ┌──────────────────────────────────────────────────────┐
 │  Boot（起動層）                                       │  ← 形式化スコープ外
-│  LoadAvatar / SaveAvatar の実装を生成・インジェクト   │
-│  テストでは IORef stub（ControlSpec）が代替する       │
+│  LoadAvatar / SaveAvatar の実装を生成・インジェクト     │
+│  テストでは IORef stub（ControlSpec）が代替する        │
 ├──────────────────────────────────────────────────────┤
 │  Interface（現象層）                                  │  ← ControlSpec.hs が模擬
 ├──────────────────────────────────────────────────────┤
@@ -54,7 +54,7 @@ cpa-semantic/
 │  Projected Context（射影層）                          │  ← ProjectedContext/Context.hs
 ├──────────────────────────────────────────────────────┤
 │  Core Model（根源層）                                 │  ← CoreModel/Type.hs
-│  GlobalConfig / ContextualState / Avatar              │
+│  GlobalConfig / ContextualState / Avatar             │
 │  LoadAvatar / SaveAvatar 型エイリアス                 │
 └──────────────────────────────────────────────────────┘
 ```

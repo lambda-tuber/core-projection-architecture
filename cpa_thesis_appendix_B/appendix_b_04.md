@@ -60,18 +60,19 @@ cpa-application-state/
 ```
 ┌──────────────────────────────────────────────────────────────┐
 │  Boot（起動層）                                               │  ← 形式化スコープ外
-│  AppStateW StartState を生成して run を呼ぶ                   │
+│  AppStateW StartState を生成して run を呼ぶ                    │
 ├──────────────────────────────────────────────────────────────┤
 │  Interface（現象層）                                          │  ← ControlSpec.hs が模擬
 ├──────────────────────────────────────────────────────────────┤
-│  ApplicationBase / Control.hs                                 │
-│  runAppBase：イベントループ                                   │
-│  transit   ：状態遷移の実行（TH自動生成）                     │
-│  ApplicationBase / State / {Start, Run, Stop}.hs              │
-│  各状態の IStateActivity インスタンス（Entry/Exit/Transit/doActivity） │
+│  ApplicationBase / Control.hs                                │
+│  runAppBase：イベントループ                                    │
+│  transit   ：状態遷移の実行（TH自動生成）                       │
+│  ApplicationBase / State / {Start, Run, Stop}.hs             │
+│  各状態の IStateActivity インスタンス                          │
+│                            （Entry/Exit/Transit/doActivity） │
 ├──────────────────────────────────────────────────────────────┤
-│  CoreModel / Type.hs                                          │
-│  AppState GADT / AppStateW / Event GADT / EventW              │
+│  CoreModel / Type.hs                                         │
+│  AppState GADT / AppStateW / Event GADT / EventW             │
 │  IStateActivity / IAppState / IAppStateW 型クラス             │
 │  AppStateContext モナドスタック                               │
 └──────────────────────────────────────────────────────────────┘
