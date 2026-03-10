@@ -1,0 +1,9 @@
+packages:
+  ./
+  ../../CoreModel/cpa-multiverse
+  ../../ProjectedContext/cpa-semantic-world
+  ../../ProjectedContext/cpa-ontological-world
+  ../../Interface/cpa-request
+  ../../Interface/cpa-response
+  ../../ApplicationBase/cpa-fractal-app
+  

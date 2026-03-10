@@ -1,0 +1,61 @@
+cabal-version:      3.0
+name:               cpa-request
+version:            0.1.0.0
+license:            MIT
+license-file:       LICENSE
+author:             Aska Lanclaude
+maintainer:         xxx@gmail.com
+category:           System
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+
+common warnings
+    ghc-options: -Wall
+
+library
+    import:           warnings
+    exposed-modules:
+        CPA.Request.CoreModel.Type
+        CPA.Request.CoreModel.TH
+        CPA.Request.CoreModel.Utility
+        CPA.Request.CoreModel.Constant
+        CPA.Request.ApplicationBase.State.Start
+        CPA.Request.ApplicationBase.State.Run
+        CPA.Request.ApplicationBase.State.Stop
+        CPA.Request.ApplicationBase.Control
+        CPA.Request.Interface.Stdio
+        CPA.Request.Boot.Bootstrap
+    build-depends:
+        base ^>=4.18.3.0
+      , stm
+      , conduit
+      , monad-logger
+      , transformers
+      , mtl
+      , template-haskell
+      , text
+      , cpa-multiverse
+    hs-source-dirs:   src
+    default-language: Haskell2010
+
+test-suite cpa-request-test
+    import:           warnings
+    default-language: Haskell2010
+    type:             exitcode-stdio-1.0
+    hs-source-dirs:   test
+    other-modules:    CPA.Request.Boot.BootstrapSpec
+    main-is:          Spec.hs
+    build-depends:
+        base ^>=4.18.3.0
+      , stm
+      , async
+      , hspec
+      , hspec-discover
+      , monad-logger
+      , mtl
+      , transformers
+      , text
+      , cpa-multiverse
+      , cpa-request
+    build-tool-depends:
+        hspec-discover:hspec-discover

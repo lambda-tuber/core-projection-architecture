@@ -1,0 +1,75 @@
+cabal-version:      3.0
+name:               cpa-bootstrap
+version:            0.1.0.0
+license:            MIT
+license-file:       LICENSE
+author:             Aska Lanclaude
+maintainer:         xxx@gmail.com
+category:           System
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+
+common warnings
+    ghc-options: -Wall
+
+library
+    import:           warnings
+    exposed-modules:
+        CPA.Bootstrap.CoreModel.Type
+        CPA.Bootstrap.CoreModel.Utility
+        CPA.Bootstrap.CoreModel.Constant
+        CPA.Bootstrap.ApplicationBase.Control
+    build-depends:
+        base              ^>=4.18.3.0
+      , stm
+      , async
+      , yaml
+      , aeson
+      , text
+      , data-default
+      , monad-logger
+      , lens
+      , directory
+      , filepath
+      , cpa-multiverse
+    hs-source-dirs:   src
+    default-language: Haskell2010
+
+executable cpa-bootstrap
+    import:           warnings
+    main-is:          Main.hs
+    autogen-modules:  Paths_cpa_bootstrap
+    other-modules:    Paths_cpa_bootstrap
+    build-depends:
+        base              ^>=4.18.3.0
+      , safe-exceptions
+      , optparse-applicative
+      , cpa-bootstrap
+      , cpa-multiverse
+      , cpa-fractal-app
+      , cpa-semantic-world
+      , cpa-ontological-world
+      , cpa-request
+      , cpa-response
+    hs-source-dirs:   app
+    default-language: Haskell2010
+
+test-suite cpa-bootstrap-test
+    import:           warnings
+    default-language: Haskell2010
+    other-modules:
+        CPA.Bootstrap.ApplicationBase.ControlSpec
+    type:             exitcode-stdio-1.0
+    hs-source-dirs:   test
+    main-is:          Spec.hs
+    build-depends:
+        base              ^>=4.18.3.0
+      , stm
+      , async
+      , hspec
+      , hspec-discover
+      , monad-logger
+      , cpa-multiverse
+      , cpa-bootstrap
+    build-tool-depends:
+        hspec-discover:hspec-discover

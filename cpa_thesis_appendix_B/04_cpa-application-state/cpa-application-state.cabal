@@ -1,0 +1,51 @@
+cabal-version:      3.0
+name:               cpa-application-state
+version:            0.1.0.0
+license:            MIT
+license-file:       LICENSE
+author:             Aska Langley
+maintainer:         xxx@gmail.com
+category:           System
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+
+common warnings
+    ghc-options: -Wall
+
+library
+    import:           warnings
+    exposed-modules:
+        CPA.Application.State.CoreModel.Type
+      , CPA.Application.State.CoreModel.Utility
+      , CPA.Application.State.CoreModel.TH
+      , CPA.Application.State.ApplicationBase.Control
+      , CPA.Application.State.ApplicationBase.State.Start
+      , CPA.Application.State.ApplicationBase.State.Run
+      , CPA.Application.State.ApplicationBase.State.Stop
+    build-depends:
+        base          ^>=4.18.3.0
+      , mtl
+      , transformers
+      , template-haskell
+      , monad-logger
+      , text
+    hs-source-dirs:   src
+    default-language: Haskell2010
+
+test-suite cpa-application-state-test
+    import:           warnings
+    default-language: Haskell2010
+    other-modules:    CPA.Application.State.ApplicationBase.ControlSpec
+    type:             exitcode-stdio-1.0
+    hs-source-dirs:   test
+    main-is:          Spec.hs
+    build-depends:
+        base          ^>=4.18.3.0
+      , hspec
+      , hspec-discover
+      , monad-logger
+      , transformers
+      , mtl
+      , cpa-application-state
+    build-tool-depends:
+      hspec-discover:hspec-discover
