@@ -50,10 +50,17 @@ Core が扱う概念は実行基盤の存在様式に依存しない。
 型レベルでは、実行世界を表す計算文脈がスタックに現れない形として観測される。
 
 ```haskell
--- 論理的構成（外包型）
--- 実行世界の計算文脈がスタックに含まれない
+-- 論理的構成（外包型）の概念的表現
+-- 実行世界の計算文脈がスタックに含まれない形を示す
 type ProjectedContext a = ReaderT Context (State AppState) a
 ```
+
+> **注：** 上記は外包型侵食の構造的本質を示す概念的なコード例である。
+> 実際の論理的構成では、外部との入出力のために IO を Application Base のスタックに含む実装が通例となる。
+> たとえば Appendix B の `cpa-semantic` における実装では
+> `ReaderT GlobalConfig (StateT ContextualState IO) a` のように IO を含む形となっており、
+> これは「IO が Core の外側を包む（外包型）」という分類の典型例である。
+> IO の存在は外包型侵食の証拠ではなく、IO がスタックの**外側**を包む構造であることが外包型の本質である。
 
 #### 5.3.2 内包型侵食（Inside-out Erosion）
 
@@ -72,6 +79,10 @@ type ProjectedContext a = ReaderT UnityWorld (StateT GameState Unity) a
 --                                                              ↑
 --                        実行世界の計算文脈がここに現れる = 内包型侵食の型レベル証拠
 ```
+
+外包型との本質的な差異は、IO（実行世界の計算文脈）がスタックの**外側**に位置するか**内側**に位置するかではなく、
+実行世界を表す型（Unity 等）が Core の定義から切り離せない存在条件として組み込まれているかどうかにある。
+Appendix B の `cpa-ontological` では `World m` 型クラスとして実行世界を抽象化した実装がこの内包型侵食の型レベル証拠として機能している（Appendix B.2・B.3 参照）。
 
 ---
 

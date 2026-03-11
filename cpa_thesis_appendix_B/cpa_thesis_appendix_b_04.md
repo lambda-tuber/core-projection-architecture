@@ -64,12 +64,12 @@ cpa-application-state/
 ├──────────────────────────────────────────────────────────────┤
 │  Interface（現象層）                                          │  ← ControlSpec.hs が模擬
 ├──────────────────────────────────────────────────────────────┤
-│  ApplicationBase / Control.hs                                │
+│  ApplicationBase / Control.hs                                 │
 │  runAppBase：イベントループ                                    │
 │  transit   ：状態遷移の実行（TH自動生成）                       │
-│  ApplicationBase / State / {Start, Run, Stop}.hs             │
-│  各状態の IStateActivity インスタンス                          │
-│                            （Entry/Exit/Transit/doActivity） │
+│  ApplicationBase / State / {Start, Run, Stop}.hs              │
+│  各状態の IStateActivity インスタンス                          │ 
+│                            （Entry/Exit/Transit/doActivity）  │
 ├──────────────────────────────────────────────────────────────┤
 │  CoreModel / Type.hs                                         │
 │  AppState GADT / AppStateW / Event GADT / EventW             │
