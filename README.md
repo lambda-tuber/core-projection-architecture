@@ -1137,9 +1137,9 @@ Core Projection Architecture が示したかったのも、それと同じこと
 
 ### References
 
-#### Appendix A：レイヤ命名と旧来語彙の対応表
-#### Appendix B：Haskellによる形式化コード
-#### Appendix C：評価スコア詳細比較
+#### Appendix A：[レイヤ命名と旧来語彙の対応表](cpa_thesis_appendix_a.md)
+#### Appendix B：[Haskellによる形式化コード](cpa_thesis_appendix_b.md)
+#### Appendix C：[評価スコア詳細比較](cpa_thesis_appendix_c.md)
 
 ---
 
