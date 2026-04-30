@@ -1,3 +1,5 @@
 *.bak
 *.log
 *.tmp
+cpa_thesis_assets/cpa_architecture_image*
+skills.md
